@@ -2,18 +2,6 @@
 
 A full-stack Task Management application built with Node.js, Express, MongoDB, and React.
 
----
-
-## Table of Contents
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [API Endpoints](#api-endpoints)
-- [Key Decisions](#key-decisions)
-
----
-
 ## Features
 
 ### Core Features
@@ -49,7 +37,7 @@ A full-stack Task Management application built with Node.js, Express, MongoDB, a
 - **React** — UI library
 - **Vite** — Build tool
 - **Axios** — HTTP client for API calls
-- **Plain CSS** — Styling
+- **CSS** — Styling
 
 ---
 
@@ -123,25 +111,6 @@ cd task-manager/client
 npm run dev
 ```
 
-### 7. Open the app
-```
-http://localhost:5173
-```
-
----
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/tasks` | Get all tasks |
-| POST | `/tasks` | Create a new task |
-| PUT | `/tasks/:id` | Update a task |
-| PATCH | `/tasks/:id/complete` | Mark task as completed |
-| DELETE | `/tasks/:id` | Delete a task |
-
----
-
 ## Key Decisions
 
 ### Why MongoDB?
@@ -156,3 +125,9 @@ All API calls are centralized in `taskService.js` using Axios. This keeps compon
 ### Why plain CSS?
 No CSS framework was used to keep the project lightweight and demonstrate core CSS skills with a clean, minimal design.
 
+### Validation Strategy
+
+### Validation is handled on both the frontend and backend.
+
+Frontend — Basic checks are performed before sending requests so users get instant feedback (for example, when the task title is empty). This improves the overall user experience and avoids unnecessary API calls.
+Backend — All data is validated again on the server to ensure correctness and handle cases where requests might bypass the frontend.
