@@ -156,7 +156,3 @@ All API calls are centralized in `taskService.js` using Axios. This keeps compon
 ### Why plain CSS?
 No CSS framework was used to keep the project lightweight and demonstrate core CSS skills with a clean, minimal design.
 
-### Validation Strategy
-Validation is done on both frontend and backend:
-- **Frontend** — immediate feedback to user without waiting for API
-- **Backend** — ensures data integrity regardless of how the API is called
